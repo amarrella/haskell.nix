@@ -24,6 +24,6 @@ steps:
 
   - label: 'Update pins'
     command:
-      - "buildkite-agent artifact download '*.json'"
+      - 'buildkite-agent artifact download "*.json" .'
       - nix-build -A maintainer-scripts.update-pins -o update-pins.sh
       - ./update-pins.sh
